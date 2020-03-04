@@ -1,0 +1,4 @@
+{
+  "*.js": "npm run lint:js --cache",
+  "*.{scss,css}": "npm run lint:css"
+}

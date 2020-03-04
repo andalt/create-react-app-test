@@ -45,14 +45,5 @@
     "stylelint": "^13.2.0",
     "stylelint-config-sh": "git+https://git@gitlab.smarthead.ru/frontend-public/stylelint-config-sh.git",
     "stylelint-scss": "^3.14.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "npm run lint:js --cache",
-    "*.{scss,css}": "npm run lint:css"
   }
 }
