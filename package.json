@@ -17,8 +17,7 @@
     "eject": "react-scripts eject",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --color --quiet ./src --ext .js",
-    "lint:css": "stylelint **/*.{scss,css}",
-    "precommit": "lint-staged"
+    "lint:css": "stylelint **/*.{scss,css}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{scss,css}": "stylelint --fix"
+    "*.js": "npm run lint:js --cache",
+    "*.{scss,css}": "npm run lint:css"
   }
 }
