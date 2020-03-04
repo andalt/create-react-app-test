@@ -1,0 +1,22 @@
+{
+  "extends": "eslint-config-sh-react",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "window": true,
+    "ENV": true
+  },
+  "rules": {
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "^src/",
+          "^utils/"
+        ]
+      }
+    ]
+  }
+}

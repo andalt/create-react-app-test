@@ -5,6 +5,17 @@
 /.pnp
 .pnp.js
 
+# jetbrains
+/.idea
+
+# sass
+/.sass-cache
+*.css.map
+
+/.cache
+
+*.log
+
 # testing
 /coverage
 

@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-sh",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "ignoreFiles": [
+    "build/**/*.css",
+    "src/scss/vendor/**/*.{css,scss}"
+  ],
+  "rules": {}
+}
