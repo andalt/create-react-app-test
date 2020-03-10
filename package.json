@@ -1,6 +1,7 @@
 {
   "name": "test",
   "version": "0.1.0",
+  "main": "electron.js",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -21,7 +22,8 @@
     "eject": "react-scripts eject",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --color --quiet ./src --ext .js",
-    "lint:css": "stylelint **/*.{scss,css}"
+    "lint:css": "stylelint **/*.{scss,css}",
+    "electron": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +41,10 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^5.1.0",
+    "electron": "^8.1.1",
+    "electron-builder": "^22.4.0",
+    "electron-is-dev": "^1.1.0",
     "eslint": "^6.8.0",
     "eslint-config-sh-react": "git+https://git@gitlab.smarthead.ru/frontend-public/eslint-config-sh-react.git",
     "eslint-plugin-import": "^2.20.1",
@@ -48,6 +54,7 @@
     "lint-staged": "^10.0.8",
     "stylelint": "^13.2.0",
     "stylelint-config-sh": "git+https://git@gitlab.smarthead.ru/frontend-public/stylelint-config-sh.git",
-    "stylelint-scss": "^3.14.2"
+    "stylelint-scss": "^3.14.2",
+    "wait-on": "^4.0.1"
   }
 }
