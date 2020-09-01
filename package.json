@@ -1,17 +1,21 @@
 {
-  "name": "test",
-  "version": "0.1.0",
-  "main": "electron.js",
+  "name": "cra-electron",
+  "description": "CRA + Electron sitting in a tree",
+  "author": "And",
+  "version": "0.0.1",
+  "main": "public/electron.js",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "env-cmd": "^10.1.0",
-    "node-sass": "^4.13.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "electron-is-dev": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start .env.development",
@@ -23,7 +27,8 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --color --quiet ./src --ext .js",
     "lint:css": "stylelint **/*.{scss,css}",
-    "electron": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron:start": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "react-scripts build .env.production && electron-builder"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,20 +46,19 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "electron": "^8.1.1",
-    "electron-builder": "^22.4.0",
-    "electron-is-dev": "^1.1.0",
-    "eslint": "^6.8.0",
+    "concurrently": "^5.3.0",
+    "electron": "^9.2.1",
+    "electron-builder": "^22.8.0",
+    "eslint": "^6.6.0",
     "eslint-config-sh-react": "git+https://git@gitlab.smarthead.ru/frontend-public/eslint-config-sh-react.git",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
-    "stylelint": "^13.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "stylelint": "^13.6.1",
     "stylelint-config-sh": "git+https://git@gitlab.smarthead.ru/frontend-public/stylelint-config-sh.git",
-    "stylelint-scss": "^3.14.2",
-    "wait-on": "^4.0.1"
+    "stylelint-scss": "^3.18.0",
+    "wait-on": "^5.2.0"
   }
 }
